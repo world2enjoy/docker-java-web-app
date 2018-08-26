@@ -1,6 +1,6 @@
 # java-web-app with docker
 
-Below are the steps to run a java app by deploying into tomcat and the tomcat is running inside a docker container.
+Below are the steps to run a java web app by deploying into tomcat and the tomcat is running inside a docker container.
 
 * clone the java code from this repository that contains the Dockerfile. Go to the repository directory.
 * maven build: `mvn clean verify -DskipTests`
