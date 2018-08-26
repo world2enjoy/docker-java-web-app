@@ -37,11 +37,13 @@ public class HelloServlet extends HttpServlet {
 	}
 
 	public static Connection getCon(String jdbcUrl) {
+		
 		String url = null;
+		url = jdbcUrl;
 		if (jdbcUrl == null || jdbcUrl.isEmpty()) {
 			url = "jdbc:mysql://misql:3306/mydb";
 		}
-		url = jdbcUrl;
+		
 		String userName = "root";
 		String password = "password1";
 
