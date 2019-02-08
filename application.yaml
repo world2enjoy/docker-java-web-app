@@ -1,0 +1,42 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: phoenix
+  namespace: phoenix
+  labels:
+    build_number: ${BUILD_NUMBER}
+    app: phoenix
+    role: rolling-update
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: phoenix
+  template:
+    metadata:
+      labels:
+        app: phoenix
+    spec:
+      containers:
+      - name: phoenix
+        image: world2enjoy/phoenix2.0:latest
+        ports:
+        - containerPort: 80
+    strategy:
+    type: RollingUpdate
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: phoenix-c
+  namespace: phoenix
+  labels:
+    app: phoenix
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30005
+  selector:
+    app: phoenix
