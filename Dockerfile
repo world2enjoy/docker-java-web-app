@@ -1,4 +1,3 @@
-
 RUN apt-get -y update && apt-get -y upgrade && apt-get install -y curl && apt-get update && apt-get install -y iputils-ping
 RUN apt-get -y install openjdk-8-jdk wget
 RUN mkdir /usr/local/tomcat
