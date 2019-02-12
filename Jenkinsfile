@@ -45,7 +45,7 @@
       steps {
                 script {
                     
-                  sh('bash ./run-docker.sh')
+                  sh('bash ./run-docker.sh http://54.185.178.109:30005/app')
                     
                 }
             }  
