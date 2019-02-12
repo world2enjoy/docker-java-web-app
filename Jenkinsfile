@@ -46,6 +46,7 @@
                 script {
                     
                   sh('bash ./run-docker.sh http://54.185.178.109:30005/app > scanoutput.txt')
+                   sh('cat scanoutput.txt')
                     
                 }
             }  
