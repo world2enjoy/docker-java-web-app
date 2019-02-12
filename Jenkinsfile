@@ -45,7 +45,7 @@
       steps {
                 script {
                     
-                  sh('./run-docker.sh')
+                  sh('bash ./run-docker.sh')
                     
                 }
             }  
