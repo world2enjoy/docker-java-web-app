@@ -47,9 +47,12 @@
                     
                   sh('bash ./run-docker.sh http://54.185.178.109:30005/app > scanoutput.txt')
                    sh('cat scanoutput.txt')
+                   sh('cat scanresults.txt')
+                  
                                       
                 }
           archiveArtifacts artifacts: 'scanoutput.txt'
+          archiveArtifacts artifacts: 'scanresults.txt'
             }  
       
         }
