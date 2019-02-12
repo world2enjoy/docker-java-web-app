@@ -41,6 +41,17 @@
             }
         }
         
+        stage('Run ZAP scan'){  
+      steps {
+                script {
+                    
+                  sh('run-docker.sh')
+                    
+                }
+            }  
+      
+        }
+        
         stage('Deploy kubernetes'){
           
           steps {
