@@ -54,7 +54,7 @@
         }
     }];
 
-var jsonHtmlTable = ConvertJsonToTable(nestedTable_old , 'jsonTable', null, 'Download');
+var jsonHtmlTable = ConvertJsonToTable(nestedTable_new , 'jsonTable', null, 'Download');
 
 document.write("<center>");
 document.write (jsonHtmlTable );
