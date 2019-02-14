@@ -45,7 +45,7 @@
       steps {
                 script {
                     
-                  sh('bash ./run-docker.sh http://54.185.178.109:30005/app > scanoutput.txt')
+                  sh('bash ./run-docker.sh http://54.190.168.185:30005/app > scanoutput.txt')
                    sh('cat scanoutput.txt')
                    sh('cat scanresults.txt')
                   
@@ -64,7 +64,7 @@
                 kubeconfigId: 'kubeconfig',
                 configs: 'application.yaml',
                 enableConfigSubstitution: true)
-                echo 'App url: http://54.185.178.109:30005/app'
+                echo 'App url: http://54.190.168.185:30005/app'
           }
                      
         }
